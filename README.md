@@ -24,7 +24,7 @@ Rodar o comando para autenticação: `ngrok config add-authtoken 2eTJaSv2jtOxZK7
 
 Rodar o comando para expor a porta da api:`ngrok.exe http 3000`
 
-Após vc fazer isso voce podera rodar o nosso App para testar localmente!(ATENTESE, POIS APÓS ESSE ULTIMO PASSO ELE IRA GERAR A SUA URL PARA CONFIGURAR NO APP POR GENTILEZA)
+Após vc fazer isso voce podera rodar o nosso App para testar localmente!(ATENTEM-SE, POIS APÓS ESSE ULTIMO PASSO ELE IRA GERAR A SUA URL LOCAL PARA CONFIGURAR NO APP POR GENTILEZA)
 
 Entre em src/services/api e mude a url atual, para a url que o ngrok está disponibilizando para voce!
 
@@ -35,7 +35,7 @@ PRONTO AGORA VAMOS PARA O APP!
 
 CLONE O REPOSITÓRIO
 
-EXECUTE O COMANDO `Nnpm install` 
+EXECUTE O COMANDO `Npm install` 
 
 depois execute o comando `npx expo start -c`
 
