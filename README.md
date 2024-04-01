@@ -1,8 +1,13 @@
 TAREFAS CONCLUIDAS APLICATIVO MOBILE
+
 [x] Listagem de todos os produtos
+
 [x] Detalhes dos produtos
+
 [x] Visualização da localização do jogo no mapa
+
 [x] Compra do jogo
+
 [x] Leitura do QRCode pela câmera do app
 
 ANTES DE TUDO!
