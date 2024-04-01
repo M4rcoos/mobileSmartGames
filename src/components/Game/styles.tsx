@@ -15,6 +15,8 @@ export const GameImage = styled.Image`
   height: 200px;
   border-radius: 10px;
   margin-bottom: 10px;
+  
+  
 `;
 
 // Título do jogo
@@ -28,6 +30,7 @@ export const GameTitle = styled.Text`
 // Plataforma do jogo
 export const PlatformText = styled.Text`
   margin-bottom: 5px;
+  font-weight:bold;
   color: ${theme.colors.white};
 `;
 

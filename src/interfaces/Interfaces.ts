@@ -15,7 +15,7 @@ export interface IPlatform {
 }
 
 export interface IStore {
-  adress: string;
+  address: string;
   sales_quantity: number;
   name: string;
   linkMap: string;

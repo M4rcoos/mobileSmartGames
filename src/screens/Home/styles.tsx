@@ -13,6 +13,8 @@ export const Title = styled.Text`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: ${theme.colors.gray_10};
+  text-align: center;
 `;
 export const Input = styled.TextInput`
  border-radius: 16px;

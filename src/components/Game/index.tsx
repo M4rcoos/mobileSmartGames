@@ -14,11 +14,12 @@ interface GameProps {
 
 // Componente Game que exibe os detalhes de um jogo
 const Game: React.FC<GameProps> = ({ game, onBuy }) => {
+  
   return (
     <C.GameContainer>
-      <C.GameImage source={{ uri: game.linkImage }} />
+      <C.GameImage source={{ uri: game.linkImage }} resizeMode='cover' />
       <C.GameTitle>{game.nameGame}</C.GameTitle>
-      <C.PlatformText>{game.platforms.map(platform => platform.namePlatform).join(', ')}</C.PlatformText>
+      <C.PlatformText>{game.platforms?.map(platform => platform.namePlatform).join(', ')}</C.PlatformText>
       <C.PriceText>R$ {game.price.toFixed(2)}</C.PriceText>
       <C.BuyButton onPress={onBuy}>
         <C.BuyButtonText>Ver jogo</C.BuyButtonText>

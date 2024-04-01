@@ -33,14 +33,11 @@ export const GlobalStorage: React.FC<Props> = ({ children }) => {
 
   const fetchData = async (): Promise<void> => {
     try {
-       const response = await api.get("/games")
-       const data = response.data;
-       
-        setGames(data.games);
-        
-     } catch (error) {
-       if (error instanceof Error) setError(error.message);
-     }
+      const response = await api.get("/api/games");
+      setGames(response.data.games)
+    } catch (error) {
+      console.error(JSON.stringify(error)); 
+    } 
     
   };
 
