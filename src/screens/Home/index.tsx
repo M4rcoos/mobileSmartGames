@@ -16,7 +16,8 @@ export const Home = () => {
       // Navegar para a página de produto e passar o ID do produto como parâmetro
       navigation.navigate('Product', { idGame: id });
     };
-
+    
+     //filtrar pelo nome
     const filteredGames = games?.filter((game) =>
     game.nameGame.toLowerCase().includes(input.toLowerCase())
   );

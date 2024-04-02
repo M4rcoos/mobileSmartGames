@@ -7,7 +7,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import * as C from './styles'
 
-export const Product = ({ route }) => {
+export const Product = ({ route }: any) => {
   const { idGame } = route.params;
   const [game, setGame] = useState<IGame>();
   const [hasPermission, setHasPermission] = useState<boolean>(false);
@@ -26,7 +26,7 @@ export const Product = ({ route }) => {
   // traz os detalhes do game da Api
   const fetchGameDetails = async (): Promise<void> => {
     try {
-      const response = await api.get(`/api/games/${idGame}`);
+      const response = await api.get<IGame>(`/api/games/${idGame}`);
       setGame(response.data);
     } catch (error) {
       console.error(JSON.stringify(error));
@@ -39,7 +39,7 @@ export const Product = ({ route }) => {
 
   //Cadastra a compra no banco de dados!
   const handleBuy = (idGame: number, idStore: number) => {
-    api.put(`/api/games/${idGame}/${idStore}`).then(() => {
+    api.put<IGame>(`/api/games/${idGame}/${idStore}`).then(() => {
       const mensagem = "A sua compra foi efetuada com sucesso!";
       Alert.alert(mensagem);
       console.log()
@@ -52,7 +52,7 @@ export const Product = ({ route }) => {
   };
 
   //escanear o qrCode
-  const handleBarCodeScanned = ({ type, data }: { type: string, data: string }) => {
+  const handleBarCodeScanned = ({  data }: {data: string }) => {
     setScanned(true);
     const discount = parseInt(data); // Convertendo o valor do desconto para número inteiro
 
